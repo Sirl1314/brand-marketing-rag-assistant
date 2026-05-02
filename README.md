@@ -197,36 +197,30 @@ bash pip install -r requirements.txt
 ---
 
 ## 📁 项目结构
-品牌营销智能助手/ │ ├── main.py # 主入口文件，Streamlit应用启动逻辑 
-├── config.py # 配置文件（API Key、模型路径、数据库配置等） 
-├── rag_chain.py # RAG核心逻辑（检索链、生成链、智能路由） 
-├── loader.py # 文档加载器（读取、分片、向量化） 
-├── ui.py # UI组件封装（聊天界面、侧边栏、状态指示器） 
-├── utils.py # 工具函数（会话管理、日志记录、错误处理） 
-│ ├── media_docs/ # 【知识库目录】存放传媒行业文档 
-│ ├── media.docx # 示例文档1 
-│ └── media01.docx # 示例文档2 
-│ ├── sessions/ # 【会话存储目录】自动保存聊天记录
-│ ├── 2026-05-02 18-00-29.json 
-│ ├── 2026-05-02 19-15-57.json 
-│ └── ... 
-│ ├── chroma_db/ # 【向量数据库】自动生成，无需手动创建 
-│ └── ... 
-│ ├── models/ # 【本地模型】Embedding模型缓存
-│ └── bge-small-zh-v1.5/ 
-│ ├── config.json │ ├── model.safetensors 
-│ └── ... 
-│ ├── assets/ # 【资源文件】效果图、图标等
-│ └── screenshots/ 
-│ ├── main_chat_interface.png
-│ ├── rag_qa_demo.png 
-│ ├── session_management.png 
-│ └── knowledge_base_status.png
-│ ├── .env # 环境变量文件（可选，用于敏感配置） 
-├── requirements.txt # Python依赖包列表 
-├── README.md # 项目说明文档（本文件） 
-├── LICENSE # 开源许可证 
-└── logo.png # 项目Logo
+# 项目结构
+
+```text
+品牌营销智能助手/
+├── main.py              # 主入口文件，Streamlit 应用启动逻辑
+├── config.py            # 配置文件（API Key、模型路径、数据库配置等）
+├── rag_chain.py          # RAG 核心逻辑（检索链、生成链、智能路由）
+├── loader.py             # 文档加载器（读取、分片、向量化）
+├── ui.py                 # UI 组件封装（聊天界面、侧边栏、状态指示器）
+├── utils.py              # 工具函数（会话管理、日志记录、错误处理）
+│
+├── media_docs/           # 【知识库目录】存放传媒行业文档
+│   ├── media.docx       # 示例文档1
+│   └── media01.docx     # 示例文档2
+│
+├── assets/              # 【资源文件】效果图、图标等
+│   ├── logo.png
+│   ├── main_chat_interface.png
+│   ├── rag_qa_demo.png
+│   └── session_management.png
+│
+├── .gitignore            # Git 忽略规则（敏感文件、缓存、模型、数据库）
+├── requirements.txt      # Python 依赖包列表
+└── README.md             # 项目说明文档
 
 
 **核心文件职责说明**：
