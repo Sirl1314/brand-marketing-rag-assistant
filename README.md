@@ -223,6 +223,7 @@ bash pip install -r requirements.txt
 └── README.md             # 项目说明文档
 
 
+---
 **核心文件职责说明**：
 
 | 文件名 | 核心职责 |
@@ -234,7 +235,6 @@ bash pip install -r requirements.txt
 | `ui.py` | Streamlit UI组件封装（聊天窗口、侧边栏等） |
 | `utils.py` | 通用工具函数（JSON读写、日志、异常处理） |
 
----
 
 ## 📚 知识库说明
 
