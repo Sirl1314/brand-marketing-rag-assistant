@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import ast; [ast.parse\\(open\\(f\\).read\\(\\)\\) for f in ['config.py','loader.py','rag_chain.py','ui.py','main.py']]; print\\('All files pass syntax check'\\)\")",
+      "Bash(python -c \"import ast; [ast.parse\\(open\\(f, encoding='utf-8'\\).read\\(\\)\\) for f in ['config.py','loader.py','rag_chain.py','ui.py','main.py']]; print\\('All files pass syntax check'\\)\")",
+      "Bash(\"D:\\\\PythonProject1\\\\.venv\\\\Scripts\\\\python.exe\" -c \"import chromadb; print\\(chromadb.__version__\\)\")"
+    ]
+  }
+}
