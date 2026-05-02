@@ -195,35 +195,34 @@ bash pip install -r requirements.txt
 - "短视频脚本创作的3秒法则如何应用？"
 
 ---
+## 项目结构
+# 品牌营销智能助手
 
-## 📁 项目结构
-# 项目结构
+## 项目结构
+   ```text
+   品牌营销智能助手/
+   ├── main.py              # 主入口文件，Streamlit 应用启动逻辑
+   ├── config.py            # 配置文件（API Key、模型路径、数据库配置等）
+   ├── rag_chain.py          # RAG 核心逻辑（检索链、生成链、智能路由）
+   ├── loader.py             # 文档加载器（读取、分片、向量化）
+   ├── ui.py                 # UI 组件封装（聊天界面、侧边栏、状态指示器）
+   ├── utils.py              # 工具函数（会话管理、日志记录、错误处理）
+   │
+   ├── media_docs/           # 【知识库目录】存放传媒行业文档
+   │   ├── media.docx       # 示例文档1
+   │   └── media01.docx     # 示例文档2
+   │
+   ├── assets/              # 【资源文件】效果图、图标等
+   │   ├── logo.png
+   │   ├── main_chat_interface.png
+   │   ├── rag_qa_demo.png
+   │   └── session_management.png
+   │
+   ├── .gitignore            # Git 忽略规则（敏感文件、缓存、模型、数据库）
+   ├── requirements.txt      # Python 依赖包列表
+   └── README.md             # 项目说明文档
+```
 
-```text
-品牌营销智能助手/
-├── main.py              # 主入口文件，Streamlit 应用启动逻辑
-├── config.py            # 配置文件（API Key、模型路径、数据库配置等）
-├── rag_chain.py          # RAG 核心逻辑（检索链、生成链、智能路由）
-├── loader.py             # 文档加载器（读取、分片、向量化）
-├── ui.py                 # UI 组件封装（聊天界面、侧边栏、状态指示器）
-├── utils.py              # 工具函数（会话管理、日志记录、错误处理）
-│
-├── media_docs/           # 【知识库目录】存放传媒行业文档
-│   ├── media.docx       # 示例文档1
-│   └── media01.docx     # 示例文档2
-│
-├── assets/              # 【资源文件】效果图、图标等
-│   ├── logo.png
-│   ├── main_chat_interface.png
-│   ├── rag_qa_demo.png
-│   └── session_management.png
-│
-├── .gitignore            # Git 忽略规则（敏感文件、缓存、模型、数据库）
-├── requirements.txt      # Python 依赖包列表
-└── README.md             # 项目说明文档
-
-
----
 **核心文件职责说明**：
 
 | 文件名 | 核心职责 |
@@ -302,4 +301,3 @@ bash pip install -r requirements.txt
 > **注意**：修改或删除文档后，必须清空 `chroma_db/` 并重启，否则会出现数据不一致
 
 ---
-
